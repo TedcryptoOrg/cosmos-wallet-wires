@@ -33,7 +33,7 @@ console.log(address); // Returns evmos... address
 
 ## Current EVM blockchains
 
-    | Chain Name | Network ID | Ethereum ID | URL |
-    |------------|------------|-------------|-----|
-    | EVMOS      | 9000       | 0x2329 | https://evmos.org/ |
-    | Rebus      | 1000       | 0x457 | https://rebuschain.com/ |
+| Chain Name | Network ID | Ethereum ID | URL                     |
+|------------|------------|-------------|-------------------------|
+| EVMOS      | 9000       | 0x2329      | https://evmos.org/      |
+| Rebus      | 1000       | 0x457       | https://rebuschain.com/ |
