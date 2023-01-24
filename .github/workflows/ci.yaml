@@ -2,7 +2,12 @@ name: Build & Deploy
 
 on:
   push:
-    branches: [ "*" ]
+    branches: [master]
+  pull_request:
+    branches: ['**']
+
+permissions:
+  contents: read
 
 concurrency:
   group: ${{ github.head_ref || github.run_id }}
