@@ -2,7 +2,7 @@ import MetaMaskWallet from "../../../src/providers/MetaMaskWallet";
 
 describe('MetaMaskWallet', () => {
     let mockWallet: any;
-    let metaMaskWallet: MetaMaskWallet;
+    let metaMaskWallet: any;
 
     beforeEach(() => {
         mockWallet = {
@@ -27,7 +27,7 @@ describe('MetaMaskWallet', () => {
 
             try {
                 await metaMaskWallet.connect('evmos');
-            } catch (error) {
+            } catch (error: any) {
                 expect(error.message).toBe('[Metamask] Please install Metamask Extension');
             }
         });
@@ -37,7 +37,7 @@ describe('MetaMaskWallet', () => {
 
             try {
                 await metaMaskWallet.connect('evmos');
-            } catch (error) {
+            } catch (error: any) {
                 expect(error.message).toBe('Problem fetching ethereum chain id');
             }
         });
@@ -105,7 +105,7 @@ describe('MetaMaskWallet', () => {
             mockWallet.request.mockResolvedValueOnce('0x2329').mockResolvedValueOnce(['0x1234567890abcdef']);
             try {
                 await metaMaskWallet.getAddress('0x457');
-            } catch (error) {
+            } catch (error: any) {
                 expect(error.message).toBe('[Metamask] Not connected to the correct network. Please switch to rebus');
             }
         });
@@ -115,7 +115,7 @@ describe('MetaMaskWallet', () => {
 
             try {
                 await metaMaskWallet.getAddress('rebus');
-            } catch (error) {
+            } catch (error: any) {
                 expect(error.message).toBe('Problem fetching ethereum chain id');
             }
         });
@@ -125,7 +125,7 @@ describe('MetaMaskWallet', () => {
 
             try {
                 await metaMaskWallet.getAddress('rebus');
-            } catch (error) {
+            } catch (error: any) {
                 expect(error.message).toBe('Problem fetching ethereum account');
             }
         });
@@ -135,7 +135,7 @@ describe('MetaMaskWallet', () => {
 
             try {
                 await metaMaskWallet.getAddress('unknown');
-            } catch (error) {
+            } catch (error: any) {
                 expect(error.message).toBe('Unknown chain id unknown');
             }
         });

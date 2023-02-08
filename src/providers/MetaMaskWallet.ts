@@ -1,5 +1,6 @@
 import {ethToRebus} from "../ethermint-address-converter/converter";
 import {ethToEvmos} from "@tharsis/address-converter";
+import { Wallet } from "../Wallet";
 
 export default class MetaMaskWallet implements Wallet {
     private wallet: any;

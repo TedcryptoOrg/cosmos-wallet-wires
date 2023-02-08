@@ -1,3 +1,5 @@
+import { Wallet } from "../Wallet";
+
 export default class KeplrWallet implements Wallet {
     private wallet: any;
     private readonly offlineSigner: any;

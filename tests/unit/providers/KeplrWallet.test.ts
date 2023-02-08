@@ -1,7 +1,7 @@
 import KeplrWallet from '../../../src/providers/KeplrWallet';
 
 describe('KeplrWallet', () => {
-    let keplrWallet: KeplrWallet;
+    let keplrWallet: any;
     let mockWallet: any;
     let offlineSigner: any;
 
@@ -72,7 +72,7 @@ describe('KeplrWallet', () => {
             await keplrWallet.connect(chainId, {});
             try {
                 await keplrWallet.getAddress(chainId);
-            } catch (error) {
+            } catch (error: any) {
                 expect(error.message).toBe('Problem fetching address from keplr');
             }
         });
