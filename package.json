@@ -1,6 +1,6 @@
 {
-  "name": "cosmos-wallet-wires",
-  "version": "0.0.1",
+  "name": "@tedcryptoorg/cosmos-wallet-wires",
+  "version": "0.0.2",
   "description": "Simple library for cosmos wallets integrations",
   "scripts": {
     "test": "jest --passWithNoTests",
