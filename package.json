@@ -1,15 +1,20 @@
 {
   "name": "cosmos-wallet-wires",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.1",
+  "description": "Simple library for cosmos wallets integrations",
   "scripts": {
-    "compile": "tsc",
-    "test": "jest"
+    "test": "jest --passWithNoTests",
+    "clean": "rm -rf ./lib",
+    "build": "npm run clean && npm run build:cjs",
+    "build:cjs": "tsc -p ./configs/tsconfig.cjs.json",
+    "prepack": "npm run build"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Josh_Lopes<josluis.lopes@gmail.com>",
+  "license": "MIT",
+  "repository": "https://github.com/TedcryptoOrg/cosmos-signer",
+  "types": "./lib/cjs/types/index.d.ts",
+  "main": "./lib/cjs/index.js",
   "dependencies": {
     "@tharsis/address-converter": "^0.1.8",
     "bech32": "^1.1.4",

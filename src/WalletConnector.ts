@@ -1,3 +1,5 @@
+import { Wallet } from "./Wallet";
+
 export default class WalletConnector {
     private wallet: Wallet;
 
