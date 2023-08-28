@@ -1,10 +1,6 @@
-name: Build & Deploy
+name: "Static analysis"
 
-on:
-  push:
-    branches: [master]
-  pull_request:
-    branches: ['**']
+on: [push]
 
 permissions:
   contents: read
@@ -27,4 +23,4 @@ jobs:
         run: npm install
 
       - name: Run Lint
-        run: npm test
+        run: npm run lint
