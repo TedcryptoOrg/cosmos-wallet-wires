@@ -19,7 +19,7 @@
   "main": "./lib/cjs/index.js",
   "dependencies": {
     "@tharsis/address-converter": "^0.1.8",
-    "bech32": "^1.1.4",
+    "bech32": "^2.0.0",
     "crypto-addr-codec": "^0.1.7",
     "jest-circus": "^29.6.4"
   },
