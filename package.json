@@ -8,7 +8,7 @@
     "build": "npm run clean && npm run build:cjs",
     "build:cjs": "tsc -p ./configs/tsconfig.cjs.json",
     "prepack": "npm run build",
-    "lint": "eslint src/**/*.ts scripts/**/*.ts",
+    "lint": "eslint src/**/*.ts",
     "lint:fix": "eslint --fix src/**/*.ts"
   },
   "keywords": [],
